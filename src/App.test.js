@@ -14,8 +14,10 @@ test('App should render', () => {
 });
 
 test('Button should render', () => {
+  render(<App />);
   // TODO: change the expect to actually test something 😉
-  expect('no test written').toBe('tested');
+  const button = screen.getByText('Current theme:'); 
+  expect(button).toBeInTheDocument(); 
 });
 
 /**
